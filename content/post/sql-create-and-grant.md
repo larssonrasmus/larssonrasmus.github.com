@@ -1,5 +1,5 @@
 ---
-date: "2020-04-20 11:42"
+date: "2020-04-20"
 title: "Creating a new user on MySQL"
 type: "post"
 ---
