@@ -1,7 +1,57 @@
-baseurl = "/"
-languageCode = "en-us"
-theme = "hello-friend"
 title = "Rasmus Larsson"
-metaDataFormat = "yaml"
-paginate = 10
-uglyURLs = true
+baseURL = 'https://rasmuslarsson.se'
+
+languageCode = 'en-us'
+defaultContentLanguage = "en-gb" # For dates
+
+# Enable emojis globally
+enableEmoji = true
+ignoreErrors = ["additional-script-loading-error"] # ignore error of loading additional scripts.
+
+# traditional way: theme component resides in directory 'themes'
+theme = "hugo-blog-awesome"
+
+[services]
+# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
+# To disable Google Analytics, simply leave the field empty or remove the next two lines
+  [services.googleAnalytics]
+    id = '' # G-MEASUREMENT_ID
+
+# To enable Disqus comments, provide Disqus Shortname below.
+# To disable Disqus comments, simply leave the field empty or remove the next two lines
+  [services.disqus]
+    shortname = ''
+
+# set markup.highlight.noClasses=false to enable code highlight
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+	[markup.tableOfContents]
+		startLevel = 2 # ToC starts from H2
+		endLevel = 4 # ToC ends at H4
+		ordered = false # generates <ul> instead of <ol>
+
+[params.author]
+  avatar = "rasmus.png" # put the file in assets folder; also ensure that image has same height and width
+  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
+  intro = "Rasmus Larsson"
+  name = "Rasmus Larsson"
+  description = "I spend most of my time working with technology. This is a small space where I can document some of my projects and practice my writing."
+
+# Allow to override `browserconfig.xml` params (configuration for windows embedded browsers)
+[params.browserconfig]
+  TileColor = "#2d89ef" # default windows 10 blue tile color
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/larssonrasmus"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/larssonrasmus/"
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"

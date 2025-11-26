@@ -1,8 +1,0 @@
-
-dateFormatList = "January 2, 2006"
-dateFormatSingle = "January 2, 2006"
-contentTypeName = "post"
-defaultTheme = "dark"
-
-[logo]
-  logoText = "Rasmus Larsson"
